@@ -36,6 +36,11 @@ def __?__(self)
 # python manage.py makemigrations photo
 # 3. migrate -> 변경 내역을 반영
 # python manage.py migrate photo
+
+"""
+모델 변경시 migrate 를 해야하는 경우는 데이터베이스에 영향을 끼치는
+변경 사항일 경우에만 실행한다.
+"""
 class BMI(models.Model):
     # 어떤 데이터를 저장할지 변수들을 설정: 필드 설정
     name = models.CharField(max_length=50, blank=True)
