@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>BMI 정보 입력</h1>
+    <!--
+        form: 사용자에게 입력을 받을 때 사용하는 태그
+        action: 입력받은 데이터를 어느 페이지(어느 뷰) 로 전달할지 해당 주소
+        method: 어떤 방식으로 데이터를 전달할지
+            - get: 주소뒤에 쿼리스트링으로 전달
+            - post:  html request 메시지에 담아서 잔달하는 방식(https)
+    -->
+    <form action="" method="get">
+        키: <input type="text" name="height"><br>
+        체중: <input type="text" name="weight"><br>
+        <input type="submit" value="입력완료">
+    </form>
+
+    {% if bmi > 0 %}
+    당신의 BMI 수치는 {{bmi}} 입니다.
+    {% endif %}
+</body>
+</html>
